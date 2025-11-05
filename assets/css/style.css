@@ -1,0 +1,160 @@
+:root {
+  --primary-color: #2a9d8f;
+  --secondary-color: #264653;
+  --accent-color: #e76f51;
+  --background-color: #f8f9fa;
+  --text-color: #2d3436;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background-color: var(--secondary-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: white;
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: var(--accent-color);
+}
+
+.hero {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Merriweather', serif;
+}
+
+.lead {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-family: 'Merriweather', serif;
+}
+
+.readmore {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.readmore:hover {
+  text-decoration: underline;
+}
+
+h2, h3 {
+  color: var(--secondary-color);
+  font-family: 'Merriweather', serif;
+}
+
+.members {
+  list-style: none;
+  padding: 0;
+}
+
+.members li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--secondary-color);
+    padding: 1rem;
+  }
+  
+  .site-nav.active {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .site-nav a {
+    margin: 0.5rem 0;
+  }
+  
+  #nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
